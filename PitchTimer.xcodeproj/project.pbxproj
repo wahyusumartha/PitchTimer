@@ -24,6 +24,9 @@
 		EBA3E96517B53C6E0012CD08 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA3E94417B53C6E0012CD08 /* CoreData.framework */; };
 		EBA3E96D17B53C6F0012CD08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBA3E96B17B53C6E0012CD08 /* InfoPlist.strings */; };
 		EBA3E97017B53C6F0012CD08 /* PitchTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA3E96F17B53C6F0012CD08 /* PitchTimerTests.m */; };
+		EBA3E98317B53D280012CD08 /* PTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA3E98117B53D280012CD08 /* PTMainViewController.m */; };
+		EBA3E98417B53D280012CD08 /* PTMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA3E98217B53D280012CD08 /* PTMainViewController.xib */; };
+		EBA3E98717B53E410012CD08 /* PTScreenTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA3E98617B53E410012CD08 /* PTScreenTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,12 @@
 		EBA3E96C17B53C6F0012CD08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EBA3E96E17B53C6F0012CD08 /* PitchTimerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PitchTimerTests.h; sourceTree = "<group>"; };
 		EBA3E96F17B53C6F0012CD08 /* PitchTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PitchTimerTests.m; sourceTree = "<group>"; };
+		EBA3E98017B53D280012CD08 /* PTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTMainViewController.h; sourceTree = "<group>"; };
+		EBA3E98117B53D280012CD08 /* PTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTMainViewController.m; sourceTree = "<group>"; };
+		EBA3E98217B53D280012CD08 /* PTMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTMainViewController.xib; sourceTree = "<group>"; };
+		EBA3E98517B53E410012CD08 /* PTScreenTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTScreenTimer.h; sourceTree = "<group>"; };
+		EBA3E98617B53E410012CD08 /* PTScreenTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTScreenTimer.m; sourceTree = "<group>"; };
+		EBA3E98917B5428C0012CD08 /* PTMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +129,11 @@
 		EBA3E94617B53C6E0012CD08 /* PitchTimer */ = {
 			isa = PBXGroup;
 			children = (
+				EBA3E98817B542790012CD08 /* Macro */,
+				EBA3E97C17B53C8B0012CD08 /* Libs */,
+				EBA3E97B17B53C820012CD08 /* View Controllers */,
+				EBA3E97A17B53C7C0012CD08 /* Controllers */,
+				EBA3E97917B53C760012CD08 /* Models */,
 				EBA3E94F17B53C6E0012CD08 /* PTAppDelegate.h */,
 				EBA3E95017B53C6E0012CD08 /* PTAppDelegate.m */,
 				EBA3E95817B53C6E0012CD08 /* PitchTimer.xcdatamodeld */,
@@ -159,6 +173,55 @@
 				EBA3E96B17B53C6E0012CD08 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBA3E97917B53C760012CD08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EBA3E97A17B53C7C0012CD08 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EBA3E97B17B53C820012CD08 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EBA3E97F17B53CCF0012CD08 /* XIB */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EBA3E97C17B53C8B0012CD08 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				EBA3E98517B53E410012CD08 /* PTScreenTimer.h */,
+				EBA3E98617B53E410012CD08 /* PTScreenTimer.m */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		EBA3E97F17B53CCF0012CD08 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				EBA3E98017B53D280012CD08 /* PTMainViewController.h */,
+				EBA3E98117B53D280012CD08 /* PTMainViewController.m */,
+				EBA3E98217B53D280012CD08 /* PTMainViewController.xib */,
+			);
+			name = XIB;
+			sourceTree = "<group>";
+		};
+		EBA3E98817B542790012CD08 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				EBA3E98917B5428C0012CD08 /* PTMacro.h */,
+			);
+			name = Macro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +300,7 @@
 				EBA3E95317B53C6E0012CD08 /* Default.png in Resources */,
 				EBA3E95517B53C6E0012CD08 /* Default@2x.png in Resources */,
 				EBA3E95717B53C6E0012CD08 /* Default-568h@2x.png in Resources */,
+				EBA3E98417B53D280012CD08 /* PTMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +338,8 @@
 				EBA3E94D17B53C6E0012CD08 /* main.m in Sources */,
 				EBA3E95117B53C6E0012CD08 /* PTAppDelegate.m in Sources */,
 				EBA3E95A17B53C6E0012CD08 /* PitchTimer.xcdatamodeld in Sources */,
+				EBA3E98317B53D280012CD08 /* PTMainViewController.m in Sources */,
+				EBA3E98717B53E410012CD08 /* PTScreenTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

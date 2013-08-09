@@ -8,6 +8,8 @@
 
 #import "PTAppDelegate.h"
 
+#import "PTMainViewController.h"
+
 @implementation PTAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -19,6 +21,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    // Add Main View Controller 
+    PTMainViewController *mainViewController = [[PTMainViewController alloc] init];
+    [self.window setRootViewController:mainViewController];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

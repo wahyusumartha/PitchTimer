@@ -8,6 +8,9 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface PitchTimerTests : SenTestCase
+@class PTScreenTimer;
+@interface PitchTimerTests : SenTestCase {
+    PTScreenTimer *_screenTimer;
+}
 
 @end

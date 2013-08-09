@@ -8,6 +8,8 @@
 
 #import "PitchTimerTests.h"
 
+#import "PTScreenTimer.h"
+
 @implementation PitchTimerTests
 
 - (void)setUp
@@ -15,18 +17,21 @@
     [super setUp];
     
     // Set-up code here.
+    _screenTimer = [[PTScreenTimer alloc] init];
 }
 
 - (void)tearDown
 {
     // Tear-down code here.
+    _screenTimer = nil;
     
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testIfTimerIsInitialized
 {
-    STFail(@"Unit tests are not implemented yet in PitchTimerTests");
+    [_screenTimer startTimer:10];
+    STAssertNotNil(_screenTimer.timer, @"Timer should not be nil");
 }
 
 @end
