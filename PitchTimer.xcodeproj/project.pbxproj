@@ -27,6 +27,10 @@
 		EBA3E98317B53D280012CD08 /* PTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA3E98117B53D280012CD08 /* PTMainViewController.m */; };
 		EBA3E98417B53D280012CD08 /* PTMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA3E98217B53D280012CD08 /* PTMainViewController.xib */; };
 		EBA3E98717B53E410012CD08 /* PTScreenTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA3E98617B53E410012CD08 /* PTScreenTimer.m */; };
+		EBA3E99117B5D5270012CD08 /* PTListPitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA3E98F17B5D5270012CD08 /* PTListPitchViewController.m */; };
+		EBA3E99217B5D5270012CD08 /* PTListPitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA3E99017B5D5270012CD08 /* PTListPitchViewController.xib */; };
+		EBA3E99817B5D8400012CD08 /* PTListPitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA3E99717B5D8400012CD08 /* PTListPitchCell.m */; };
+		EBA3E99A17B5E2100012CD08 /* PTListPitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA3E99917B5E2100012CD08 /* PTListPitchCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,12 @@
 		EBA3E98517B53E410012CD08 /* PTScreenTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTScreenTimer.h; sourceTree = "<group>"; };
 		EBA3E98617B53E410012CD08 /* PTScreenTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTScreenTimer.m; sourceTree = "<group>"; };
 		EBA3E98917B5428C0012CD08 /* PTMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTMacro.h; sourceTree = "<group>"; };
+		EBA3E98E17B5D5270012CD08 /* PTListPitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTListPitchViewController.h; sourceTree = "<group>"; };
+		EBA3E98F17B5D5270012CD08 /* PTListPitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTListPitchViewController.m; sourceTree = "<group>"; };
+		EBA3E99017B5D5270012CD08 /* PTListPitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTListPitchViewController.xib; sourceTree = "<group>"; };
+		EBA3E99617B5D8400012CD08 /* PTListPitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTListPitchCell.h; sourceTree = "<group>"; };
+		EBA3E99717B5D8400012CD08 /* PTListPitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTListPitchCell.m; sourceTree = "<group>"; };
+		EBA3E99917B5E2100012CD08 /* PTListPitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTListPitchCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +202,8 @@
 		EBA3E97B17B53C820012CD08 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EBA3E97F17B53CCF0012CD08 /* XIB */,
+				EBA3E98B17B5D4DE0012CD08 /* List View  */,
+				EBA3E98A17B5D4D10012CD08 /* Main View */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -206,22 +217,35 @@
 			name = Libs;
 			sourceTree = "<group>";
 		};
-		EBA3E97F17B53CCF0012CD08 /* XIB */ = {
-			isa = PBXGroup;
-			children = (
-				EBA3E98017B53D280012CD08 /* PTMainViewController.h */,
-				EBA3E98117B53D280012CD08 /* PTMainViewController.m */,
-				EBA3E98217B53D280012CD08 /* PTMainViewController.xib */,
-			);
-			name = XIB;
-			sourceTree = "<group>";
-		};
 		EBA3E98817B542790012CD08 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
 				EBA3E98917B5428C0012CD08 /* PTMacro.h */,
 			);
 			name = Macro;
+			sourceTree = "<group>";
+		};
+		EBA3E98A17B5D4D10012CD08 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				EBA3E98017B53D280012CD08 /* PTMainViewController.h */,
+				EBA3E98117B53D280012CD08 /* PTMainViewController.m */,
+				EBA3E98217B53D280012CD08 /* PTMainViewController.xib */,
+			);
+			name = "Main View";
+			sourceTree = "<group>";
+		};
+		EBA3E98B17B5D4DE0012CD08 /* List View  */ = {
+			isa = PBXGroup;
+			children = (
+				EBA3E98E17B5D5270012CD08 /* PTListPitchViewController.h */,
+				EBA3E98F17B5D5270012CD08 /* PTListPitchViewController.m */,
+				EBA3E99017B5D5270012CD08 /* PTListPitchViewController.xib */,
+				EBA3E99617B5D8400012CD08 /* PTListPitchCell.h */,
+				EBA3E99717B5D8400012CD08 /* PTListPitchCell.m */,
+				EBA3E99917B5E2100012CD08 /* PTListPitchCell.xib */,
+			);
+			name = "List View ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +325,8 @@
 				EBA3E95517B53C6E0012CD08 /* Default@2x.png in Resources */,
 				EBA3E95717B53C6E0012CD08 /* Default-568h@2x.png in Resources */,
 				EBA3E98417B53D280012CD08 /* PTMainViewController.xib in Resources */,
+				EBA3E99217B5D5270012CD08 /* PTListPitchViewController.xib in Resources */,
+				EBA3E99A17B5E2100012CD08 /* PTListPitchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +366,8 @@
 				EBA3E95A17B53C6E0012CD08 /* PitchTimer.xcdatamodeld in Sources */,
 				EBA3E98317B53D280012CD08 /* PTMainViewController.m in Sources */,
 				EBA3E98717B53E410012CD08 /* PTScreenTimer.m in Sources */,
+				EBA3E99117B5D5270012CD08 /* PTListPitchViewController.m in Sources */,
+				EBA3E99817B5D8400012CD08 /* PTListPitchCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

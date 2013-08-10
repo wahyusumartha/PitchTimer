@@ -36,7 +36,6 @@
     [self.screenTimer setDelegate:self];
     [self.screenTimer startTimer:10];
     
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +47,7 @@
 #pragma mark - PTScreenTimer Delegate 
 - (void)didStopTimer
 {
+    // set background color to red
     [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         [self.view setBackgroundColor:[UIColor redColor]];
     } completion:^(BOOL finished) {
@@ -59,6 +59,7 @@
 {
     [self.countdownLabel setText:@"10"];
     
+    // set background color to green
     [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         [self.view setBackgroundColor:[UIColor greenColor]];
     } completion:^(BOOL finished) {
@@ -68,6 +69,7 @@
 
 - (void)didReceiveTimerWarningState
 {
+    // set background color to orange
     [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         [self.view setBackgroundColor:[UIColor orangeColor]];
     } completion:^(BOOL finished) {

@@ -9,6 +9,7 @@
 #import "PTAppDelegate.h"
 
 #import "PTMainViewController.h"
+#import "PTListPitchViewController.h"
 
 @implementation PTAppDelegate
 
@@ -25,6 +26,9 @@
     // Add Main View Controller 
     PTMainViewController *mainViewController = [[PTMainViewController alloc] init];
     [self.window setRootViewController:mainViewController];
+
+//    PTListPitchViewController *listPitchViewController = [[PTListPitchViewController alloc] init];
+//    [self.window setRootViewController:listPitchViewController];
     
     [self.window makeKeyAndVisible];
     return YES;
