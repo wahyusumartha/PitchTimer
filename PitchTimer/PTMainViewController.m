@@ -11,8 +11,11 @@
 #import "PTScreenTimer.h"
 #import "PTMacro.h"
 
-@interface PTMainViewController () <PTScreenTimerDelegate>
+#define MINUTES_TO_SECONDS(MINUTES) (MINUTES * 60)
+#define DURATION_OF_COLOR_TRANSITION 0.5
 
+@interface PTMainViewController () <PTScreenTimerDelegate>
+- (void)setupGesture;
 @end
 
 @implementation PTMainViewController
@@ -31,10 +34,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    // setup Gesture
+    [self setupGesture];
+    
     // Start The Timer
     self.screenTimer = [[PTScreenTimer alloc] init];
     [self.screenTimer setDelegate:self];
-    [self.screenTimer startTimer:10];
+//    [self.screenTimer startTimer:MINUTES_TO_SECONDS(0.25)];
     
 }
 
@@ -48,8 +54,8 @@
 - (void)didStopTimer
 {
     // set background color to red
-    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        [self.view setBackgroundColor:[UIColor redColor]];
+    [UIView animateWithDuration:DURATION_OF_COLOR_TRANSITION delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        [self.view setBackgroundColor:[UIColor colorWithRed:231/255.f green:74/255.f blue:126/255.f alpha:1.0]];
     } completion:^(BOOL finished) {
         
     }];
@@ -57,11 +63,10 @@
 
 - (void)didStartTimer
 {
-    [self.countdownLabel setText:@"10"];
     
     // set background color to green
-    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        [self.view setBackgroundColor:[UIColor greenColor]];
+    [UIView animateWithDuration:DURATION_OF_COLOR_TRANSITION delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        [self.view setBackgroundColor:[UIColor colorWithRed:31/255.f green:187/255.f blue:166/255.f alpha:1.0]];
     } completion:^(BOOL finished) {
         
     }];
@@ -70,8 +75,8 @@
 - (void)didReceiveTimerWarningState
 {
     // set background color to orange
-    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        [self.view setBackgroundColor:[UIColor orangeColor]];
+    [UIView animateWithDuration:DURATION_OF_COLOR_TRANSITION delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        [self.view setBackgroundColor:[UIColor colorWithRed:242/255.f green:121/255.f blue:53/255.f alpha:1.0]];
     } completion:^(BOOL finished) {
         
     }];
@@ -81,7 +86,38 @@
 - (void)countingDown:(NSInteger)remainingTime
 {
     DLog(@"Remaining Time : %d", remainingTime);
-    [self.countdownLabel setText:[NSString stringWithFormat:@"%d", remainingTime]];
+    [self.countdownLabel setText:[self convertToString:remainingTime]];
+}
+
+#pragma mark - Private Methods 
+- (void)setupGesture
+{
+    self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(startOrPauseTimer:)];
+    self.tapGesture.numberOfTouchesRequired = 1;
+    self.tapGesture.numberOfTapsRequired = 1;
+    
+    [self.view addGestureRecognizer:self.tapGesture];
+}
+
+- (NSString *)convertToString:(NSInteger)remainingTime
+{
+    int second = remainingTime % 60;
+    int minutes = (remainingTime / 60) < 60 ? (remainingTime / 60) : (remainingTime/60) - 60;
+    int hours = (remainingTime / 60) / 60;
+    
+    NSString *stringFormat = [NSString stringWithFormat:@"%d : %d : %d", hours, minutes, second];
+    
+    return stringFormat;
+}
+
+#pragma mark - Start or Pause Timer 
+- (void)startOrPauseTimer:(id)sender
+{
+    if (self.screenTimer.timer) {
+        [self.screenTimer pauseTimer];
+    } else {
+        [self.screenTimer resumeTimer];
+    }
 }
 
 @end

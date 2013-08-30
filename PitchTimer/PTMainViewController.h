@@ -19,5 +19,9 @@
  *  Instance Variable that associated with label in Interface Builder
  */
 @property (weak, nonatomic) IBOutlet UILabel *countdownLabel;
+/*
+ * An object to use tap Gesture for Start or Pause The Timer
+ */
+@property (strong, nonatomic) UITapGestureRecognizer *tapGesture;
 
 @end

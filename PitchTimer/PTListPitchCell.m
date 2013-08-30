@@ -8,11 +8,16 @@
 
 #import "PTListPitchCell.h"
 
-@interface PTListPitchCell() {
-    UILongPressGestureRecognizer *_longPressGesture;
-}
+@interface PTListPitchCellOwner : NSObject
 
 @end
+
+@implementation PTListPitchCellOwner
+
+
+@end
+
+
 
 @implementation PTListPitchCell
 

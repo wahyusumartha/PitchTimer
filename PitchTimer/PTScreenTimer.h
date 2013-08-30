@@ -43,9 +43,17 @@ static const NSInteger warningState = 5;
  */
 - (void)pauseTimer;
 /*
+ *  Resume The Timer
+ */
+- (void)resumeTimer;
+/*
  *  Stop Timer
  */
 - (void)stopTimer;
 
+/**
+ * Remaining Time
+ */
+- (NSInteger)remainingTime;
 @end
 

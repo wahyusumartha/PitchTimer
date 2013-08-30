@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>KiwiUnitTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>PitchTimer.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>EB388C5817CF8C54000C668F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EBA3E93A17B53C6E0012CD08</key>
 		<dict>
 			<key>primary</key>

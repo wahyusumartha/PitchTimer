@@ -41,17 +41,29 @@
     }
 }
 
+- (void)resumeTimer
+{
+    if (_remainingTime > 0) {
+
+        if (!self.timer) {
+            
+            self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDownTimer:) userInfo:nil repeats:YES];
+            
+        } else {
+            ULog(@"Timer is already initialized");
+        }
+
+    }
+    
+}
+
 - (void)pauseTimer
 {
-    [self.timer invalidate];
-    self.timer = nil;
-    
-    if (!self.timer) {
-        
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDownTimer:) userInfo:nil repeats:YES];
-        
-    } else {
-        ULog(@"Timer is already initialized");
+    if (_remainingTime > 0) {
+
+        [self.timer invalidate];
+        self.timer = nil;
+
     }
 }
 
@@ -67,7 +79,8 @@
     
     // send a message if counting down still running
     if ([self.delegate respondsToSelector:@selector(countingDown:)]) {
-        
+        NSLog(@"Remaining Time: %d", _remainingTime);
+
         [self.delegate countingDown:_remainingTime];
         
     } else {
@@ -110,6 +123,12 @@
     
     _remainingTime = 0;
     
+}
+
+#pragma mark - Get Remaining Time (For Testing Purposes)
+- (NSInteger)remainingTime
+{
+    return _remainingTime;
 }
 
 @end

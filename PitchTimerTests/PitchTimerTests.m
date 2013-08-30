@@ -32,6 +32,7 @@
 {
     [_screenTimer startTimer:10];
     STAssertNotNil(_screenTimer.timer, @"Timer should not be nil");
+    sleep(5);
 }
 
 @end

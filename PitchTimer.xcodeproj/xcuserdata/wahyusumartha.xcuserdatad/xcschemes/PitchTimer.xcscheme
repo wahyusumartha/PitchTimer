@@ -29,7 +29,7 @@
       buildConfiguration = "Debug">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EBA3E95F17B53C6E0012CD08"
@@ -37,6 +37,21 @@
                BlueprintName = "PitchTimerTests"
                ReferencedContainer = "container:PitchTimer.xcodeproj">
             </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EB388C5817CF8C54000C668F"
+               BuildableName = "KiwiUnitTest.octest"
+               BlueprintName = "KiwiUnitTest"
+               ReferencedContainer = "container:PitchTimer.xcodeproj">
+            </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "MathSpec">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

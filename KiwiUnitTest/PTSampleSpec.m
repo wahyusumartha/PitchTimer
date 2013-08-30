@@ -6,8 +6,22 @@
 //  Copyright (c) 2013 Wahyu Sumartha. All rights reserved.
 //
 
-#import "PTSampleSpec.h"
+#import <Kiwi/Kiwi.h>
 
-@implementation PTSampleSpec
+SPEC_BEGIN(MathSpec)
 
-@end
+describe(@"Math", ^{
+
+    context(@"When Do Plus Calculation", ^{
+        
+        it(@"should equal 12", ^{
+            NSInteger a = 6;
+            NSInteger b = 6;
+            [[theValue(a+b) should] equal:theValue(12)];
+        });
+        
+    });
+    
+});
+
+SPEC_END
