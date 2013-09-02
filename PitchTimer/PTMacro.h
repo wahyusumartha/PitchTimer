@@ -21,5 +21,4 @@
 #   define ULog(...)
 #endif
 
-
 #endif

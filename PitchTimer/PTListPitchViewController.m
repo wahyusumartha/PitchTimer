@@ -10,8 +10,18 @@
 #import "PTMacro.h"
 #import "PTListPitchCell.h"
 #import <FlatUIKit/UIColor+FlatUI.h>
+#import "PTStoreViewController.h"
 
 @interface PTListPitchViewController ()
+
+/*
+ *  Open Store Screen
+ */
+- (void)openStoreScreen:(id)sender;
+/*
+ *  Open Setting Screen
+ */
+- (void)openSettingScreen:(id)sender;
 
 @end
 
@@ -41,7 +51,7 @@
     self.settingBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:nil action:nil];
     [self.navigationItem setLeftBarButtonItem:self.settingBarButtonItem];
     
-    self.storeBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Store" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    self.storeBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Store" style:UIBarButtonItemStyleBordered target:self action:@selector(openStoreScreen:)];
     [self.navigationItem setRightBarButtonItem:self.storeBarButtonItem];
 }
 
@@ -78,6 +88,19 @@
     }
     
     return cell;
+}
+
+#pragma mark - Open Store Screen 
+- (void)openStoreScreen:(id)sender
+{
+    PTStoreViewController *storeViewController = [[PTStoreViewController alloc] init];
+    [self.navigationController pushViewController:storeViewController animated:YES];
+}
+
+#pragma mark - Open Setting Screen 
+- (void)openSettingScreen:(id)sender
+{
+    
 }
 
 @end
