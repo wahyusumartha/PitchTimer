@@ -47,6 +47,13 @@
     
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [self.screenTimer stopTimer];
+    [self.screenTimer setDelegate:nil];
+    self.screenTimer = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
