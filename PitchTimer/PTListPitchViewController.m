@@ -85,6 +85,7 @@
     
     if (!cell) {
         cell = [[PTListPitchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
     return cell;
