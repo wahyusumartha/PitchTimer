@@ -9,12 +9,16 @@
 #import "PTListPitchViewController.h"
 #import "PTMacro.h"
 #import "PTListPitchCell.h"
+#import <FlatUIKit/UIColor+FlatUI.h>
 
 @interface PTListPitchViewController ()
 
 @end
 
 @implementation PTListPitchViewController
+
+@synthesize storeBarButtonItem;
+@synthesize settingBarButtonItem;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +33,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // set view controller title as well as uinavigation bar title
+    [self setTitle:@"My Pitch"];
+    
+    // setup uibarbuttonitem to ui hierarchy
+    self.settingBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [self.navigationItem setLeftBarButtonItem:self.settingBarButtonItem];
+    
+    self.storeBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Store" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [self.navigationItem setRightBarButtonItem:self.storeBarButtonItem];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,17 +74,7 @@
     PTListPitchCell *cell = (PTListPitchCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell) {
-        
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"PTListPitchCell" owner:self options:nil];
-    
-        for (id currentObject in topLevelObjects) {
-            if ([currentObject isKindOfClass:[UITableViewCell class]]) {
-                cell = (PTListPitchCell *)currentObject;
-                break;
-            }
-        }
-
-        
+        cell = [[PTListPitchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     return cell;

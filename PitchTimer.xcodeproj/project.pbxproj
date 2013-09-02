@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C883064AFFE4027812126D1 /* libPods-KiwiUnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7903646975A844629D7AFF85 /* libPods-KiwiUnitTest.a */; };
 		550C3C5AA6C64F71B3886653 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1598E5602270463EA891B6DC /* libPods.a */; };
+		EB3647AC17D4801200C58E7F /* PTNewPitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3647AB17D4801200C58E7F /* PTNewPitchViewController.m */; };
 		EB388C5A17CF8C54000C668F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA3E96117B53C6E0012CD08 /* SenTestingKit.framework */; };
 		EB388C5B17CF8C55000C668F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA3E93E17B53C6E0012CD08 /* UIKit.framework */; };
 		EB388C5C17CF8C55000C668F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA3E94017B53C6E0012CD08 /* Foundation.framework */; };
@@ -16,7 +17,6 @@
 		EB388C6C17CF9289000C668F /* PTSampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EB388C6B17CF9289000C668F /* PTSampleSpec.m */; };
 		EB750CD717CF9A83000FC4F8 /* PTScreenTimerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EB750CD617CF9A83000FC4F8 /* PTScreenTimerSpec.m */; };
 		EB750CD917CFB543000FC4F8 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB750CD817CFB543000FC4F8 /* CoreText.framework */; };
-		EB750CE117CFBFA3000FC4F8 /* PTItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB750CE017CFBFA3000FC4F8 /* PTItemCell.m */; };
 		EBA3E93F17B53C6E0012CD08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA3E93E17B53C6E0012CD08 /* UIKit.framework */; };
 		EBA3E94117B53C6E0012CD08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA3E94017B53C6E0012CD08 /* Foundation.framework */; };
 		EBA3E94317B53C6E0012CD08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA3E94217B53C6E0012CD08 /* CoreGraphics.framework */; };
@@ -41,6 +41,8 @@
 		1598E5602270463EA891B6DC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7903646975A844629D7AFF85 /* libPods-KiwiUnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KiwiUnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A929F7AF49084318BD710EA6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		EB3647AA17D4801200C58E7F /* PTNewPitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTNewPitchViewController.h; sourceTree = "<group>"; };
+		EB3647AB17D4801200C58E7F /* PTNewPitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNewPitchViewController.m; sourceTree = "<group>"; };
 		EB388C5917CF8C54000C668F /* KiwiUnitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiwiUnitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB388C5F17CF8C55000C668F /* KiwiUnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KiwiUnitTest-Info.plist"; sourceTree = "<group>"; };
 		EB388C6117CF8C55000C668F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -48,8 +50,6 @@
 		EB750CD217CF97D4000FC4F8 /* KiwiUnitTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KiwiUnitTest-Prefix.pch"; sourceTree = "<group>"; };
 		EB750CD617CF9A83000FC4F8 /* PTScreenTimerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTScreenTimerSpec.m; sourceTree = "<group>"; };
 		EB750CD817CFB543000FC4F8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		EB750CDF17CFBFA3000FC4F8 /* PTItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTItemCell.h; sourceTree = "<group>"; };
-		EB750CE017CFBFA3000FC4F8 /* PTItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTItemCell.m; sourceTree = "<group>"; };
 		EBA3E93B17B53C6E0012CD08 /* PitchTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA3E93E17B53C6E0012CD08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EBA3E94017B53C6E0012CD08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,6 +111,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB3647A917D47FF700C58E7F /* Create Pitch View  */ = {
+			isa = PBXGroup;
+			children = (
+				EB3647AA17D4801200C58E7F /* PTNewPitchViewController.h */,
+				EB3647AB17D4801200C58E7F /* PTNewPitchViewController.m */,
+			);
+			name = "Create Pitch View ";
+			sourceTree = "<group>";
+		};
+		EB3647AD17D4818B00C58E7F /* Store View  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Store View ";
+			sourceTree = "<group>";
+		};
 		EB388C5D17CF8C55000C668F /* KiwiUnitTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +275,8 @@
 		EBA3E97B17B53C820012CD08 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EB3647AD17D4818B00C58E7F /* Store View  */,
+				EB3647A917D47FF700C58E7F /* Create Pitch View  */,
 				EBA3E98B17B5D4DE0012CD08 /* List View  */,
 				EBA3E98A17B5D4D10012CD08 /* Main View */,
 			);
@@ -299,8 +317,6 @@
 				EBA3E98E17B5D5270012CD08 /* PTListPitchViewController.h */,
 				EBA3E98F17B5D5270012CD08 /* PTListPitchViewController.m */,
 				EBA3E99017B5D5270012CD08 /* PTListPitchViewController.xib */,
-				EB750CDF17CFBFA3000FC4F8 /* PTItemCell.h */,
-				EB750CE017CFBFA3000FC4F8 /* PTItemCell.m */,
 			);
 			name = "List View ";
 			sourceTree = "<group>";
@@ -496,7 +512,7 @@
 				EBA3E98717B53E410012CD08 /* PTScreenTimer.m in Sources */,
 				EBA3E99117B5D5270012CD08 /* PTListPitchViewController.m in Sources */,
 				EBA3E99817B5D8400012CD08 /* PTListPitchCell.m in Sources */,
-				EB750CE117CFBFA3000FC4F8 /* PTItemCell.m in Sources */,
+				EB3647AC17D4801200C58E7F /* PTNewPitchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

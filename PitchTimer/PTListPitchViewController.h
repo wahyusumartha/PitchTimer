@@ -15,4 +15,13 @@
  */
 @property (weak, nonatomic) IBOutlet UITableView *pitchTableView;
 
+/**
+ * An UIBarButtonItem to go to store screen
+ */
+@property (strong, nonatomic) UIBarButtonItem *storeBarButtonItem;
+/**
+ *  An UIBarButtonItem to go to setting screen
+ */
+@property (strong, nonatomic) UIBarButtonItem *settingBarButtonItem;
+
 @end

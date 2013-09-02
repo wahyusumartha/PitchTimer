@@ -10,12 +10,26 @@
 
 #import "PTMainViewController.h"
 #import "PTListPitchViewController.h"
+#import <FlatUIKit/UINavigationBar+FlatUI.h>
+#import <FlatUIKit/UIColor+FlatUI.h>
+#import <FlatUIKit/UIBarButtonItem+FlatUI.h>
+
+@interface PTAppDelegate()
+
+/*
+ *  Setup Global Configuration Appearance for 
+ *      All User Interface in this app
+ */
+- (void)setupCustomUIAppearance;
+
+@end
 
 @implementation PTAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@synthesize navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -26,9 +40,18 @@
     // Add Main View Controller 
 //    PTMainViewController *mainViewController = [[PTMainViewController alloc] init];
 //    [self.window setRootViewController:mainViewController];
-
+    
+    // setup custom user interface appearance
+    [self setupCustomUIAppearance];
+    
     PTListPitchViewController *listPitchViewController = [[PTListPitchViewController alloc] init];
-    [self.window setRootViewController:listPitchViewController];
+
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:listPitchViewController];
+    
+    // flattened uinavigation controller
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
+    
+    [self.window setRootViewController:navigationController];
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -155,6 +178,13 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - Private Methods 
+- (void)setupCustomUIAppearance
+{
+    // setup uibarbutton item
+    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor peterRiverColor] highlightedColor:[UIColor belizeHoleColor] cornerRadius:3];
 }
 
 @end

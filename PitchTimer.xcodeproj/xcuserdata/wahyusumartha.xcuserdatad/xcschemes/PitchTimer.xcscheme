@@ -20,6 +20,20 @@
                ReferencedContainer = "container:PitchTimer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EB388C5817CF8C54000C668F"
+               BuildableName = "KiwiUnitTest.octest"
+               BlueprintName = "KiwiUnitTest"
+               ReferencedContainer = "container:PitchTimer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

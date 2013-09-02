@@ -10,6 +10,7 @@
 
 @interface PTAppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (strong, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
