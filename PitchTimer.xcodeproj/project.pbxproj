@@ -11,6 +11,7 @@
 		550C3C5AA6C64F71B3886653 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1598E5602270463EA891B6DC /* libPods.a */; };
 		EB3647AC17D4801200C58E7F /* PTNewPitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3647AB17D4801200C58E7F /* PTNewPitchViewController.m */; };
 		EB3647B017D48C0700C58E7F /* PTStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3647AF17D48C0700C58E7F /* PTStoreViewController.m */; };
+		EB3647B417D4B6A500C58E7F /* PTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3647B317D4B6A500C58E7F /* PTSettingViewController.m */; };
 		EB388C5A17CF8C54000C668F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA3E96117B53C6E0012CD08 /* SenTestingKit.framework */; };
 		EB388C5B17CF8C55000C668F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA3E93E17B53C6E0012CD08 /* UIKit.framework */; };
 		EB388C5C17CF8C55000C668F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA3E94017B53C6E0012CD08 /* Foundation.framework */; };
@@ -46,6 +47,8 @@
 		EB3647AB17D4801200C58E7F /* PTNewPitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTNewPitchViewController.m; sourceTree = "<group>"; };
 		EB3647AE17D48C0700C58E7F /* PTStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTStoreViewController.h; sourceTree = "<group>"; };
 		EB3647AF17D48C0700C58E7F /* PTStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTStoreViewController.m; sourceTree = "<group>"; };
+		EB3647B217D4B6A500C58E7F /* PTSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTSettingViewController.h; sourceTree = "<group>"; };
+		EB3647B317D4B6A500C58E7F /* PTSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTSettingViewController.m; sourceTree = "<group>"; };
 		EB388C5917CF8C54000C668F /* KiwiUnitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KiwiUnitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB388C5F17CF8C55000C668F /* KiwiUnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KiwiUnitTest-Info.plist"; sourceTree = "<group>"; };
 		EB388C6117CF8C55000C668F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -130,6 +133,15 @@
 				EB3647AF17D48C0700C58E7F /* PTStoreViewController.m */,
 			);
 			name = "Store View ";
+			sourceTree = "<group>";
+		};
+		EB3647B117D4B69300C58E7F /* Setting View  */ = {
+			isa = PBXGroup;
+			children = (
+				EB3647B217D4B6A500C58E7F /* PTSettingViewController.h */,
+				EB3647B317D4B6A500C58E7F /* PTSettingViewController.m */,
+			);
+			name = "Setting View ";
 			sourceTree = "<group>";
 		};
 		EB388C5D17CF8C55000C668F /* KiwiUnitTest */ = {
@@ -280,6 +292,7 @@
 		EBA3E97B17B53C820012CD08 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EB3647B117D4B69300C58E7F /* Setting View  */,
 				EB3647AD17D4818B00C58E7F /* Store View  */,
 				EB3647A917D47FF700C58E7F /* Create Pitch View  */,
 				EBA3E98B17B5D4DE0012CD08 /* List View  */,
@@ -519,6 +532,7 @@
 				EBA3E99817B5D8400012CD08 /* PTListPitchCell.m in Sources */,
 				EB3647AC17D4801200C58E7F /* PTNewPitchViewController.m in Sources */,
 				EB3647B017D48C0700C58E7F /* PTStoreViewController.m in Sources */,
+				EB3647B417D4B6A500C58E7F /* PTSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

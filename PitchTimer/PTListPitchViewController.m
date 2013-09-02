@@ -11,6 +11,7 @@
 #import "PTListPitchCell.h"
 #import <FlatUIKit/UIColor+FlatUI.h>
 #import "PTStoreViewController.h"
+#import "PTSettingViewController.h"
 
 @interface PTListPitchViewController ()
 
@@ -48,7 +49,7 @@
     [self setTitle:@"My Pitch"];
     
     // setup uibarbuttonitem to ui hierarchy
-    self.settingBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    self.settingBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:self action:@selector(openSettingScreen:)];
     [self.navigationItem setLeftBarButtonItem:self.settingBarButtonItem];
     
     self.storeBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Store" style:UIBarButtonItemStyleBordered target:self action:@selector(openStoreScreen:)];
@@ -101,7 +102,8 @@
 #pragma mark - Open Setting Screen 
 - (void)openSettingScreen:(id)sender
 {
-    
+    PTSettingViewController *settingViewController = [[PTSettingViewController alloc] init];
+    [self.navigationController pushViewController:settingViewController animated:YES];
 }
 
 @end
