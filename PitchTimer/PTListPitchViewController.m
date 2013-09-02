@@ -10,6 +10,8 @@
 #import "PTMacro.h"
 #import "PTListPitchCell.h"
 #import <FlatUIKit/UIColor+FlatUI.h>
+#import <FlatUIKit/UIFont+FlatUI.h>
+#import <FlatUIKit/FUIAlertView.h>
 #import "PTStoreViewController.h"
 #import "PTSettingViewController.h"
 
@@ -66,6 +68,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DLog(@"Tap Cell at Index : %d", indexPath.row);
+    [self showDummyAlert];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -104,6 +107,27 @@
 {
     PTSettingViewController *settingViewController = [[PTSettingViewController alloc] init];
     [self.navigationController pushViewController:settingViewController animated:YES];
+}
+
+#pragma mark - Show Dummy Alert 
+- (void)showDummyAlert
+{
+    FUIAlertView *alertView = [[FUIAlertView alloc] initWithTitle:@"Hello"
+                                                          message:@"I do not know what the fuck i have to do with this cell action"
+                                                         delegate:nil cancelButtonTitle:@"Dismiss"
+                                                otherButtonTitles:@"Do Something", nil];
+    alertView.titleLabel.textColor = [UIColor cloudsColor];
+    alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+    alertView.messageLabel.textColor = [UIColor cloudsColor];
+    alertView.messageLabel.font = [UIFont flatFontOfSize:14];
+    alertView.backgroundOverlay.backgroundColor = [[UIColor cloudsColor] colorWithAlphaComponent:0.8];
+    alertView.alertContainer.backgroundColor = [UIColor midnightBlueColor];
+    alertView.defaultButtonColor = [UIColor cloudsColor];
+    alertView.defaultButtonShadowColor = [UIColor asbestosColor];
+    alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
+    alertView.defaultButtonTitleColor = [UIColor asbestosColor];
+    [alertView show];
+
 }
 
 @end
