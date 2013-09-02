@@ -34,13 +34,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    // setup title
+    [self setTitle:@"Record Your Pitch"];
+    
     // setup Gesture
     [self setupGesture];
     
     // Start The Timer
     self.screenTimer = [[PTScreenTimer alloc] init];
     [self.screenTimer setDelegate:self];
-//    [self.screenTimer startTimer:MINUTES_TO_SECONDS(0.25)];
+    [self.screenTimer startTimer:MINUTES_TO_SECONDS(0.25)];
     
 }
 

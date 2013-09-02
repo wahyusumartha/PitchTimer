@@ -14,6 +14,7 @@
 #import <FlatUIKit/FUIAlertView.h>
 #import "PTStoreViewController.h"
 #import "PTSettingViewController.h"
+#import "PTMainViewController.h"
 
 @interface PTListPitchViewController ()
 
@@ -114,7 +115,7 @@
 {
     FUIAlertView *alertView = [[FUIAlertView alloc] initWithTitle:@"Hello"
                                                           message:@"I do not know what the fuck i have to do with this cell action"
-                                                         delegate:nil cancelButtonTitle:@"Dismiss"
+                                                         delegate:self cancelButtonTitle:@"Dismiss"
                                                 otherButtonTitles:@"Do Something", nil];
     alertView.titleLabel.textColor = [UIColor cloudsColor];
     alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
@@ -128,6 +129,28 @@
     alertView.defaultButtonTitleColor = [UIColor asbestosColor];
     [alertView show];
 
+}
+
+#pragma mark - UIAlertViewDelegate 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            [self openRecordingScreen];
+            break;
+        case 1:
+            DLog(@"Just Dismissed the alert");
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - Open Recording Screen 
+- (void)openRecordingScreen
+{
+    PTMainViewController *mainVC = [[PTMainViewController alloc] init];
+    [self.navigationController pushViewController:mainVC animated:YES];
 }
 
 @end

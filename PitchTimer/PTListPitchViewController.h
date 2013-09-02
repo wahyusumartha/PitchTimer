@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PTListPitchViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface PTListPitchViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
 /*
  *  An object that associated with UITableView in Interface Builder 
